@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: ekart-client-app
+  security:
+    oauth2:
+      client:
+        provider:
+          okta:
+            issuer-uri: https://dev-7858070.okta.com/oauth2/default
+            authorization-uri: https://dev-7858070.okta.com/oauth2/default/v1/authorize
+            token-uri: https://dev-7858070.okta.com/oauth2/default/v1/token
+            user-info-uri: https://dev-7858070.okta.com/oauth2/default/v1/userinfo
+            jwk-set-uri: https://dev-7858070.okta.com/oauth2/default/v1/keys
+        registration:
+            okta:
+                client-id: 0oalzyx4mnl73HYGV5d7
+                client-secret: BdEtSWALyLPDjqwnGcl2fv1ylo1vmdLkzWDg08b_zrJm-gPhb5L3Ypo2AQZS1ifi
+                scope: openid
+                redirect-uri: http://localhost:8080/authorization-code/callback
+                client-name: Ekart Client App
+                provider: okta
+
+server:
+  port: 8080
+debug: true
+
